@@ -1,0 +1,51 @@
+2. Time:
+   If Current_Time > 06:00 AND Current_Time <= 10:00: Meal_of_the_day [Breakfast, Coffee]
+
+   If Current_Time > 10:00 AND Current_Time <= 15:00: Meal_of_the_day [Brunch, Coffee]
+
+   If Current_Time > 15:00 AND Current_Time <= 22:00: Meal_of_the_day [Breakfast, Coffee]
+
+   If Current_Time > 22:00 AND Current_Time <= 06:00: Meal_of_the_day [Coffee] 
+   
+
+   If Open_Time < Current_Time AND Close_Time_Dine_In - Current_Time < 15 then show "Restaurant will be closing soon" next to restaurant
+     Else add restuarant to show_restaurants
+   
+   If Open_Time < Current_Time AND Close_Time_Dine_In - Current_Time < 0 
+     check if Close_Time_Drive_Thru - Current_Time > 0 then show "Only Drive-Thru is open" next to restaurant
+
+
+3. Catering:
+   
+   If party_size > 20 AND is_catering(restaurant) then add restaurant to show_restaurants
+      else display "Catering only for party size > 20"
+
+4.  Take away, drive-thru, delivery, catering, etc (on size of party and event):
+    
+   If party_size <= 20 AND Event = birthday : [Dine-In]
+   If party_size > 20 AND Event = birthday : [delivery,catering]
+
+   If party_size <= 20 AND Event = formal/aniversary :[Dine-In]
+   If party_size > 20 AND Event = formal/aniversary : [delivery,catering]
+
+   If party_size <= 4 AND Event = Casual: [Dine-In, Take-Away, Delivery]
+   If party_size >4 AND party_size<= 8 AND Event = Casual: [Dine-In, Delivery]
+
+   If party_size <= 20 AND Event = desert : [Dine-In,Take-Away]
+   If party_size > 20 AND Event = desert : [catering]
+
+   If Event = drinks or party: [Dine-In]
+
+
+
+
+ABNORMALITIES :-
+
+1. If capacity - party_size < 10% of capacity AND Medium_of = Dine-In: REMOVE
+2. If capacity - party_size < 25% of capacity AND Medium_of = Dine-In AND is_Busy_Day = TRUE: REMOVE
+
+
+
+
+
+

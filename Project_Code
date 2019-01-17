@@ -1,0 +1,400 @@
+%dataset
+%%res(name, rating, zipcode, address, capacity, event, open_time, close_time_drive_thru, close_time_dine_in, service, busy_days, cusinie, ambience, happy_hours, specials, budget) 
+
+%%res(1, 'Urban Rio Cantina & Grill', 3.5, 75074, '1000 14th Street, Suite 100, Plano, East Plano, Plano, TX' , 100, [ birthday, casual, anniversary, date, bar ], '11 AM', NA, '2 AM', [ dine_In, takeAway], [sun], [mexican], [ casual], NA, [veg, non-veg] , [40, 100]).
+
+%%res(2, 'Bread Winners', 4.5, 75204, '3301 McKinney Avenue, Dallas, TX 75204', 50, [ casual, date, coffee, bar, dessert], '7 AM', NA, '9PM', [ Dine_In, TakeAway], [ sun ], [ american ], ambience, happy_hours, ['gluten-free', 'dog-friendly', 'veg', 'non-veg'], [40, 100]) .
+
+%%res('In-N-Out', rating, zipcode, address, capacity, event, open_time, close_time_drive_thru, close_time_dine_in, service, busy_days, cusinie, ambience, happy_hours, specials, budget) 
+
+%%recommend( Location, Event, Size, Time, Cuisine, SpecialReq)
+%%not res(1, 'dog-friendly')
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ids([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+res('Urban Rio Cantina & Grill', 1).
+res('Bread Winners', 2).
+res('In-N-Out', 3).
+res('Kumars', 4).
+res('Flemings Prime Steakhouse', 5).
+res('Saalna', 6).
+res('Wu Wei Din', 7).
+res('Sun Lok Kee BBQ', 8).
+res('Rosas Cafe and Tortilla Factory', 9).
+res('On The Border Mexican Grill & Cantina', 10).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+address(1, '1000 14th Street, Suite 100, Plano, East Plano, Plano, TX, 75080').
+address(2, '3301 McKinney Avenue, Dallas, TX 75080').
+address(3, 'op5W president george bush hwy, Richardson, Tx 75080').
+address(4, '1301 Custer Rd 510, Plano, TX 75075').
+address(5, '7250 Dallas Pkwy, Plano, TX 75024').
+address(6, '3680 TX-121 suite 300, Plano, TX 75025').
+address(7, '2909 W 15th St, Plano, TX 75075').
+address(8, '1520 Independence Pkwy, Plano, TX 75075').
+address(9, '420 Coit Rd, Plano, TX 75075').
+address(10, '1505 N Central Expy, Plano, TX 75075').
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+rating(1, 3.5).
+rating(2, 4.5).
+rating(3, 2.5).
+rating(4, 4.0).
+rating(5, 4.3).
+rating(6, 4.0).
+rating(7, 4.5).
+rating(8, 4.0).
+rating(9, 4.2).
+rating(10, 3.8).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+specials('veg', [1 ,2, 4, 6, 7 ,9,10]).
+specials('non-veg', [3,4,5,6,7,8,9,10]).
+specials('gluten-free', [1, 2]).
+specials('dog-friendly', [ 3]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+event(1, birthday).
+event(1, casual).
+event(1, anniversary).
+event(1, date).
+event(1, bar).
+
+event(2, birthday).
+event(2, casual).
+event(2, date).
+event(2, coffee).
+event(2, bar).
+event(2, dessert).
+
+event(3, casual).
+event(3, buffet).
+event(3, formal).
+
+event(4, casual).
+event(4, formal).
+event(4, birthday).
+
+event(5, formal).
+event(5, date).
+
+event(6, formal).
+event(6, casual).
+event(6, coffee).
+
+event(7, formal).
+event(7, casual).
+
+event(8, birthday).
+event(8, casual).
+event(8, date).
+event(8, anniversary).
+
+event(9, birthday).
+event(9, casual).
+
+event(10, birthday).
+event(10, casual).
+event(10, anniversary).
+event(10, date).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+location(1, 75080).
+location(2, 75080).
+location(3, 75080).
+location(4, 75080).
+location(5, 75074).
+location(6, 75025).
+location(7, 75075).
+location(8, 75075).
+location(9, 75075).
+location(10, 75075).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+cusine(1, mexican).
+cusine(2, american).
+cusine(3, american).
+cusine(4, indian).
+cusine(5, american).
+cusine(6, indian).
+cusine(7, chinese).
+cusine(8, chinese).
+cusine(9, mexican).
+cusine(10, mexican).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ambaince(roof_top, [1]).
+ambaince(beach_view, [1]).
+ambaince(casual, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).
+ambaince(formal, [1, 2, 4, 5, 6, 7]).
+ambaince(fine_dining, [1, 2, 5]).
+ambaince(party, [1, 2]).
+ambaince(indoor, [1, 2, 4, 5, 6, 8, 9, 10]).
+ambaince(out_door_seating, [1, 2]).
+ambaince(date, [1, 2, 4, 5, 8, 10]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+service(dine_In, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).
+service(takeAway, [1, 2, 4, 6, 7, 8, 9, 10]).
+service(delivery, [1, 2, 7, 8]).
+service(catering, [3, 6]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+budget(l, [1, 2, 8, 9, 10]).
+budget(m, [1, 2, 3, 4, 6, 7]).
+budget(h, [2, 3, 5]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+open_time(1,1100).
+close_time(1, 200).
+
+open_time(2, 900).
+close_time(2, 2100).
+close_time_drive_thru(2, 2000).
+
+open_time(3, 900).
+close_time(3, 2100).
+
+open_time(4, 1100).
+close_time(4, 2200).
+
+open_time(5, 1130).
+close_time(5, 2200).
+
+open_time(6, 1130).
+close_time(6, 2200).
+
+open_time(7, 1100).
+close_time(7, 2100).
+
+open_time(8, 1100).
+close_time(8, 2130).
+
+open_time(9, 630).
+close_time(9, 2300).
+
+open_time(10, 1100).
+close_time(10, 2300).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+isempty([]).
+isempty([X | _]) :- fail.
+
+%member(10, [20,30,40,10]).
+memberof(X,[X|T]).
+memberof(X,[Y|T]):- memberof(X,T).
+
+nonmember(_,[]).
+nonmember(X,[Y|T]):- X\=Y, nonmember(X,T).
+
+append_unique([], Z, Z).
+append_unique([X | T], Y, Z) :- memberof(X, Y), append_unique(T, Y, Z).
+append_unique([X | T], Y, Z) :- nonmember(X, Y), append_unique(T, [X | Y], Z).
+
+inter([], _, []).
+inter([H1|T1], L2, [H1|Res]) :- memberof(H1, L2), inter(T1, L2, Res).
+inter([H1|T1], L2, Res) :- nonmember(H1, L2), inter(T1, L2, Res).
+
+del([], _, _).
+del(_, [], []).
+del(L, [H|T], Res) :- memberof(H, L), del(L, T, Res).
+del(L, [H|T],[H| Res]) :- nonmember(H, L), del(L, T, Res).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+write_address([rating(H, R) | T]) :- res(Z, H), address(H, A),  write(H),  write(':'), write(Z), write('  Rating :'), write(R), write(' Address : '), write(A), nl, write_address(T),  nl.
+write_address([]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+divide([], [], []).
+divide([X|T], [X|Os], Es):-divide(T, Es, Os).
+
+merge([], Y, Y).
+merge([X|T], [], [X|T]).
+merge([rating(Id1,X)|T1], [rating(Id2, Y)|T2], [rating(Id1,X)|Z]):- X > Y,  merge(T1, [rating(Id2, Y)|T2], Z).
+merge([rating(Id1,X)|T1], [rating(Id2, Y)|T2], [rating(Id2, Y)|Z]):- X =< Y, merge([rating(Id1,X)|T1], T2, Z).
+
+merge_sort([], []).
+merge_sort([X], [X]).
+merge_sort([Odd,Even|T1], Y):- divide([Odd,Even|T1], Odds, Evens), merge_sort(Odds, Os), merge_sort(Evens, Es), merge(Os, Es, Y).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%derv_ambiance(birthday, 9, Ambiance).
+derv_ambiance(Event, Size, Ambiance) :- (Size >= 8), memberof(Event, [ birthday,  anniversary , date]), (Ambiance = [party, casual]).
+
+derv_ambiance(Event, Size, Ambiance) :- (Size < 8), memberof(Event, [ birthday,  anniversary , date]), (Ambiance = [roof_top,  beach_view , date, fine_dining, out_door_seating]).
+
+derv_ambiance(Event, Size, Ambiance) :- memberof(Event, [ casual ]), (Ambiance = [casual, party, indoor]).
+
+derv_ambiance(Event, Size, Ambiance) :- (Size >= 8), memberof(Event, [ formal]), (Ambiance = [formal, indoor]).
+
+derv_ambiance(Event, Size, Ambiance) :- (Size < 8), memberof(Event, [ formal ]), (Ambiance = [roof_top, formal ,fine_dining]).
+
+derv_ambiance(Event, Size, Ambiance) :- memberof(Event, [ coffee ]), (Ambiance = [casual]).
+
+derv_ambiance(Event, Size, Ambiance) :- memberof(Event, [ bar ]), (Ambiance = [indoor, casual, out_door_seating]).
+
+derv_ambiance(Event, Size, Ambiance) :- memberof(Event, [ dessert ]), (Ambiance = [indoor, casual, fine_dining, formal]).
+
+derv_ambiance(Event, Size, Ambiance) :- memberof(Event, [ buffet]), (Ambiance = [indoor, casual, party]).
+
+derv_ambiance(Event, Size, Ambiance) :- memberof(Event, [ drinks_and_party ]), (Ambiance = [indoor, party]).
+
+?-derv_ambiance(formal, 2, Ambiance).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+meal_of_day(Time, Day, MealDay) :- Time >= 600 , Time < 1000, MealDay = [breakfast, coffee].
+meal_of_day(Time, Day, MealDay) :- Time >= 1000 , Time < 1500, MealDay = [brunch, coffee].
+meal_of_day(Time, Day, MealDay) :- Time >= 1500 , Time < 2200, MealDay = [breakfast, coffee].
+meal_of_day(Time, Day, MealDay) :- Time >= 2200 , Time < 600, MealDay = [hour, coffee].
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ birthday, anniversary]), Size > 8, Budget = [m].
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ birthday, anniversary, date]), Size =< 8, Time > 0, Time< 600, Budget = [h].
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ birthday, anniversary, date]), Size =< 8, Time >= 600 , Time < 2359, Budget = [m, h].
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ casual ]), Size =<5, Time > 0, Time < 600, Budget = [m].
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ casual ]), Size =<5, Time >= 600 , Time < 2359, Budget = [l, m].
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ casual ]), Size > 5, Budget = [m].
+
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ formal ]), Size < 8, Budget = [m, h].
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ formal ]), Size >= 8, Time < 1500, Budget = [ m ].
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ formal ]), Size >= 8, Time > 1500, Budget = [ h ].
+
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ coffee ]), Time >= 600 , Time < 2359, Budget = [ l ].
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ coffee ]), Time > 0000, Time < 600, Budget = [ m ].
+
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ bar, buffet,  drinks_and_party]), Budget = [ m ].
+derv_budget(Event, Size, Time, Budget) :- memberof(Event, [ dessert ]), Budget = [ l, m ].
+
+?-derv_budget(birthday, 9, 400, Budget).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%derv_service(birthday, 9, Service).
+
+derv_service(Event, Size, Service) :- Size =< 20, memberof(Event, [birthday]), (Service = [dine_In]).
+
+derv_service(Event, Size, Service) :- Size > 20, memberof(Event, [birthday]), (Service = [delivery, catering]).
+
+derv_service(Event, Size, Service) :- Size  =< 20, memberof(Event, [formal, anniversary]), (Service = [dine_In]).
+
+derv_service(Event, Size, Service) :- Size  > 20, memberof(Event, [formal, anniversary]), (Service = [delivery, catering]).
+
+derv_service(Event, Size, Service) :- Size  =< 4, memberof(Event, [casual]), (Service = [dine_In, takeAway, delivery]).
+
+derv_service(Event, Size, Service) :- Size  > 4, Size =< 20, memberof(Event, [casual]), (Service = [dine_In, delivery]).
+
+derv_service(Event, Size, Service) :- Size  > 20, memberof(Event, [casual]), (Service = [catering]).
+
+derv_service(Event, Size, Service) :- Size  =< 20, memberof(Event, [dessert]), (Service = [dine_In, takeAway]).
+
+derv_service(Event, Size, Service) :- Size  > 20, memberof(Event, [dessert]), (Service = [catering]).
+
+derv_service(Event, Size, Service) :- memberof(Event, [drinks_and_party]), (Service = [dine_In]).
+
+?-derv_service(anniversary, 10, Service).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+time_check(Id, Time, Day) :- Time >=0 , Time =< 600, open_time(Id, OpenTime), close_time(Id, CloseTime), OpenTime > CloseTime, time_manage(0, CloseTime, Time).
+
+time_check(Id, Time, Day) :- Time >=600 , Time =< 2400, open_time(Id, OpenTime), close_time(Id, CloseTime), OpenTime > CloseTime, CloseTime1 is CloseTime + 2400 , time_manage(OpenTime, CloseTime1, Time).
+
+time_check(Id, Time, Day) :- open_time(Id, OpenTime),close_time(Id, CloseTime), time_manage(OpenTime, CloseTime, Time).
+
+time_manage(OpenTime, CloseTime, Time) :- OpenTime =< Time,  CloseTime > Time.
+
+?-time_check(Id, 100, 29).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+matchEvent(Event, Ids) :- ids(ListId), matchEvent(Event, ListId, Ids).
+matchEvent(Event, [Id | Ids], [Id |Z]) :- event(Id, Event), matchEvent(Event, Ids, Z).
+matchEvent(Event, [Id | Ids], Z) :- not event(Id, Event), matchEvent(Event, Ids, Z).
+matchEvent(Event, [], []).
+
+matchLocation(Location, Ids) :- ids(ListId), matchLocation(Location, ListId, Ids).
+matchLocation(Location, [Id | Ids], [Id |Z]) :- location(Id, Location), matchLocation(Location, Ids, Z).
+matchLocation(Location, [Id | Ids], Z) :- not location(Id, Location), matchLocation(Location, Ids, Z).
+matchLocation(Location, [], []).
+
+matchCusine(Cusine, Ids) :- ids(ListId), matchCusine(Cusine, ListId, Ids).
+matchCusine(Cusine, [Id | Ids], [Id |Z]) :- cusine(Id, Cusine), matchCusine(Cusine, Ids, Z).
+matchCusine(Cusine, [Id | Ids], Z) :- not cusine(Id, Cusine), matchCusine(Cusine, Ids, Z).
+matchCusine(Cusine, [], []).
+
+matchAmbaince([Ambaince| AmbianceList], Ids) :- ambaince(Ambaince, ListId), matchAmbaince(AmbianceList, ListIds), append_unique(ListId, ListIds, Ids).
+matchAmbaince([], []).
+
+matchService([Service| ServiceList], Ids) :- service(Service, ListId), matchService(ServiceList, ListIds), append_unique(ListId, ListIds, Ids).
+matchService([], []).
+
+matchBudget([Budget| BudgetList], Ids) :- budget(Budget, ListId), matchBudget(BudgetList, ListIds), append_unique(ListId, ListIds, Ids).
+matchBudget([], []).
+
+matchrating([H| T], [rating(H, Rate) |Z] ) :- rating(H, Rate), matchrating(T, Z).
+matchrating([H|T], Z) :- not rating(H, Rate), matchrating(T, Z).
+matchrating([], []). 
+
+matchSpecial([Special| SpecialList], Ids) :- specials(Special, ListId), matchSpecial(SpecialList, ListIds), append_unique(ListId, ListIds, Ids).
+matchSpecial([], []).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+derived(Event, Size, Location, Cusine, Time, Ambiance, Service, Budget) :- derv_ambiance(Event, Size, Ambiance), derv_service(Event, Size, Service), derv_budget(Event, Size, Time, Budget).
+
+input(Event, Size, Location, Cusine, Time, Ids) :- derived(Event, Size, Location, Cusine, Time, Ambiance, Service, Budget), matchEvent(Event, Id1s), matchLocation(Location, Id2s), matchCusine(Cusine, Id3s), matchAmbaince(Ambiance, Id4s),  matchService(Service, Id5s), matchBudget(Budget, Id6s), inter(Id1s, Id2s, IdZ1s), inter(IdZ1s, Id3s, IdZ2s), inter(IdZ2s, Id4s, IdZ3s), inter(IdZ3s, Id5s, IdZ4s), inter(IdZ4s, Id6s, Ids), not notInput(Event, Size, Location, Cusine, Time, Ids).
+
+notInput(Event, Size, Location, Cusine, Time, Ids) :- derived(Event, Size, Location, Cusine, Time, Ambiance, Service, Budget), matchEvent(Event, Id1s), matchLocation(Location, Id2s), matchCusine(Cusine, Id3s),inter(Id1s, Id2s, IdZs), inter(IdZs, Id3s, Ids), not input(Event, Size, Location, Cusine, Time, Ids).
+
+input(Event, Size, Location, Cusine, Time, Ids) :- derived(Event, Size, Location, Cusine, Time, Ambiance, Service, Budget), matchEvent(Event, Id1s), matchLocation(Location, Id2s), matchCusine(Cusine, Id3s), not matchAmbaince(Ambiance, Id4s),  matchService(Service, Id5s), matchBudget(Budget, Id6s), inter(Id1s, Id2s, IdZ1s), inter(IdZ1s, Id3s, IdZ2s), inter(IdZ2s, Id5s, IdZ3s), inter(IdZ3s, Id6s, IdZ4s), del(Id4s, IdZ4s, Ids), not notInput(Event, Size, Location, Cusine, Time, Ids).
+
+input(Event, Size, Location, Cusine, Time, Ids) :- derived(Event, Size, Location, Cusine, Time, Ambiance, Service, Budget), matchEvent(Event, Id1s), matchLocation(Location, Id2s), matchCusine(Cusine, Id3s), not matchAmbaince(Ambiance, Id4s), not  matchService(Service, Id5s), matchBudget(Budget, Id6s), inter(Id1s, Id2s, IdZ1s), inter(IdZ1s, Id3s, IdZ2s), inter(IdZ2s, Id6s, IdZ3s),del(Id4s, IdZ4s, IdZ5s), del(Id5s, IdZ5s, Ids), not notInput(Event, Size, Location, Cusine, Time, Ids).
+
+
+input(Event, Size, Location, Cusine, Time, Ids) :- derived(Event, Size, Location, Cusine, Time, Ambiance, Service, Budget), matchEvent(Event, Id1s), matchLocation(Location, Id2s), matchCusine(Cusine, Id3s), not matchAmbaince(Ambiance, Id4s), not  matchService(Service, Id5s), not matchBudget(Budget, Id6s), inter(Id1s, Id2s, IdZ1s), inter(IdZ1s, Id3s, IdZ2s), del(Id4s, IdZ4s, IdZ5s), del(Id5s, IdZ5s, IdZ6s), del(Id6s, IdZ6s, Ids), not notInput(Event, Size, Location, Cusine, Time, Ids).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+main(Event, Size, Location, Cusine, Time, Special) :- isempty(Special), input(Event, Size, Location, Cusine, Time, Ids), matchrating(Ids, Ratings),merge_sort(Ratings, SortedRatings), write_address(SortedRatings).
+
+main(Event, Size, Location, Cusine, Time, Special) :- not isempty(Special), input(Event, Size, Location, Cusine, Time, Id1s), matchSpecial(Special, Id2s), inter(Id1s, Id2s, Ids), matchrating(Ids, Ratings),merge_sort(Ratings, SortedRatings), write_address(SortedRatings).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%?- derv_ambiance(birthday, 4, Ambiance).
+%?- service(birthday, 4, Service).
+%?- budget(birthday, 4, 2000, Budget).
+%?- main(birthday, 4, 75080, mexican, 2000, Ambiance, Service, Budget).
+%?- matchEvent(birthday, Id).
+%?- matchBudget([l, m], Id).
+%?- matchEvent(birthday, Id).
+%?- matchLocation(75080, Ids).
+%?- derived(birthday, 4, 75080, mexican, 2000, Ambiance, Service, Budget).
+%?- input(casual, 4, 75080, american, 2000, Ids).
+%?- matchAmbaince([roof_top,beach_view,fine_dining,out_door_seating], Ids).
+%?- merge_sort([1, 2, 3], Z).
+?- main(casual, 4, 75080, indian, 2000, []).
+%?- matchSpecial(['non-veg', 'veg'], Ids).
