@@ -24,7 +24,9 @@ The recommendation system takes the following factors into consideration while s
  
 #Sample query: 
 main(Event, Size, Location, Cusine, Time, Special) 
+
 ?-  main(casual, 4, 75080, indian, 2000, []). 
+
 Time is represented in 24hr format with no colons or dots.  
 Event can be casual, formal, birthday, anniversary 
 Cuisine is Indian, American, Chinese, Mexican  
